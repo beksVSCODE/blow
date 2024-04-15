@@ -1,0 +1,62 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+
+}
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+#match {
+    width: 20px;
+    height: 100px;
+    background-color: #FBB117;
+    border-radius: 5px;
+    position: relative;
+}
+
+#flame {
+    width: 100%;
+    height: 100px;
+    background: radial-gradient(circle, #FFD801 20%, transparent 80%);
+    border-radius: 50%;
+    position: absolute;
+    bottom: 100%;
+    animation: flicker 1s infinite alternate;
+}
+.cake{
+    padding-top: 20px;
+    width: 200px;
+    height: 130px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+
+}
+.cake > li {
+    width: 200px;
+    height: 20px;
+    background: red;
+}
+@keyframes flicker {
+    0% {
+        opacity: 0.6;
+        transform: scaleY(1);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scaleY(1.1);
+    }
+    100% {
+        opacity: 0.6;
+        transform: scaleY(1);
+    }
+}
